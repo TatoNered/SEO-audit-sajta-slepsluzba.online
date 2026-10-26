@@ -1,0 +1,413 @@
+<!doctype html>
+<html lang="sr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SEO audit — slepsluzba.online</title>
+<meta name="description" content="SEO audit sajta slepsluzba.online: tehničko stanje, sadržaj, cene, konkurenti i plan rada.">
+<style>
+  :root {
+    --bg: #fbfaf8;
+    --surface: #ffffff;
+    --text: #1c1b19;
+    --muted: #605c55;
+    --line: #e3dfd8;
+    --line-soft: #efece7;
+    --accent: #9a3412;
+    --accent-soft: #fdf3ee;
+    --code-bg: #f3f0ea;
+    --max: 50rem;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #141312;
+      --surface: #1c1b19;
+      --text: #ebe7e0;
+      --muted: #a39d93;
+      --line: #322f2c;
+      --line-soft: #262422;
+      --accent: #f0a37a;
+      --accent-soft: #241b16;
+      --code-bg: #262422;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #141312;
+    --surface: #1c1b19;
+    --text: #ebe7e0;
+    --muted: #a39d93;
+    --line: #322f2c;
+    --line-soft: #262422;
+    --accent: #f0a37a;
+    --accent-soft: #241b16;
+    --code-bg: #262422;
+  }
+
+  * { box-sizing: border-box; }
+
+  html { -webkit-text-size-adjust: 100%; }
+
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, "Times New Roman", serif;
+    font-size: 17px;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .wrap {
+    max-width: var(--max);
+    margin: 0 auto;
+    padding: 3.5rem 16px 6rem;
+  }
+
+  header.doc {
+    border-bottom: 1px solid var(--line);
+    padding-bottom: 1.75rem;
+    margin-bottom: 2.5rem;
+  }
+
+  h1 {
+    font-size: clamp(1.9rem, 5vw, 2.6rem);
+    line-height: 1.15;
+    letter-spacing: -0.015em;
+    margin: 0 0 0.6rem;
+    font-weight: 600;
+  }
+
+  .meta {
+    font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    font-size: 0.8rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+
+  .lead {
+    font-size: 1.1rem;
+    margin: 2rem 0 0;
+  }
+
+  h2 {
+    font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    font-size: 1.1rem;
+    font-weight: 650;
+    letter-spacing: -0.005em;
+    margin: 3.25rem 0 1rem;
+    padding-top: 1.25rem;
+    border-top: 1px solid var(--line-soft);
+  }
+
+  h2:first-of-type { border-top: none; padding-top: 0; }
+
+  p { margin: 0 0 1.1rem; }
+
+  a {
+    color: var(--accent);
+    text-decoration-thickness: 1px;
+    text-underline-offset: 2px;
+  }
+
+  strong { font-weight: 650; }
+
+  code {
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    font-size: 0.85em;
+    background: var(--code-bg);
+    padding: 0.1em 0.35em;
+    border-radius: 3px;
+  }
+
+  ol, ul { margin: 0 0 1.1rem; padding-left: 1.4rem; }
+  li { margin-bottom: 0.4rem; }
+
+  .table-scroll {
+    overflow-x: auto;
+    margin: 0 0 1.4rem;
+    border: 1px solid var(--line);
+    border-radius: 6px;
+    background: var(--surface);
+  }
+
+  table {
+    border-collapse: collapse;
+    width: 100%;
+    min-width: 34rem;
+    font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    font-size: 0.875rem;
+    line-height: 1.5;
+  }
+
+  th, td {
+    text-align: left;
+    vertical-align: top;
+    padding: 0.7rem 0.85rem;
+    border-bottom: 1px solid var(--line-soft);
+  }
+
+  thead th {
+    font-weight: 600;
+    font-size: 0.78rem;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: var(--muted);
+    border-bottom: 1px solid var(--line);
+    white-space: nowrap;
+  }
+
+  tbody tr:last-child td { border-bottom: none; }
+
+  .tag {
+    display: inline-block;
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 0.15em 0.55em;
+    border-radius: 999px;
+    border: 1px solid var(--line);
+    white-space: nowrap;
+  }
+  .tag-1 { background: var(--accent-soft); }
+
+  .note {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-left: 3px solid var(--accent);
+    border-radius: 0 6px 6px 0;
+    padding: 1rem 1.15rem;
+    margin: 0 0 1.4rem;
+  }
+  .note p:last-child { margin-bottom: 0; }
+
+  footer.doc {
+    margin-top: 4rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--line);
+    font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    font-size: 0.8rem;
+    color: var(--muted);
+  }
+
+  @media (max-width: 600px) {
+    body { font-size: 16px; }
+    .wrap { padding-top: 2.5rem; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="doc">
+  <h1>SEO audit sajta slepsluzba.online</h1>
+  <p class="meta">26. oktobar 2026</p>
+  <p class="lead">Isti biznis vodi dva sajta — slepsluzba.online i slepsluzbaseki.rs, sa istim telefonom 063/17-46-527 i istim gradovima — pa se signali dele na dva mesta. To je najveća stvar na listi. Posle nje dolaze tri popravke koje se najbrže vide u pretrazi: meta opisi, H1 i stranica sa cenovnikom.</p>
+</header>
+
+<h2>Prioriteti</h2>
+<p>Redosled je po tome koliko se brzo vidi efekat, a ne po tome koliko je posla. Prve četiri stavke su jednodnevni posao na sajtu i tiču se svih stranica odjednom.</p>
+<div class="table-scroll">
+<table>
+  <thead>
+    <tr><th>Šta</th><th>Zašto</th><th>Težina</th><th>Kada</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>Odabrati jedan glavni domen</td><td>slepsluzba.online i slepsluzbaseki.rs imaju isti telefon i preklapaju se na šest istih mesta</td><td><span class="tag tag-1">Srednje</span></td><td>1. nedelja</td></tr>
+    <tr><td>Napisati meta description za sve stranice</td><td>nijedna otvorena stranica ga nema, pa Google sam sastavlja tekst u rezultatu</td><td><span class="tag">Lako</span></td><td>1. nedelja</td></tr>
+    <tr><td>Po jedan H1 na stranici, sa gradom u njemu</td><td>na podstranicama H1 ne postoji, naslovi počinju od H3</td><td><span class="tag">Lako</span></td><td>1. nedelja</td></tr>
+    <tr><td>Očistiti ostatke tuđeg šablona</td><td>og:image:alt na svim stranicama govori o pranju tepiha u Nišu, a title početne se duplira</td><td><span class="tag">Lako</span></td><td>1. nedelja</td></tr>
+    <tr><td>Napraviti stranicu Cenovnik</td><td>sajt ima samo „od 3.000 din“, dok tri sajta iz top rezultata imaju pun cenovnik</td><td><span class="tag tag-1">Srednje</span></td><td>2. nedelja</td></tr>
+    <tr><td>Brojači: upisati prave cifre ili ih skloniti</td><td>prikazuju „0+“, „0/7“ i „0min“ pored tvrdnje o preko 1.000 klijenata</td><td><span class="tag tag-1">Srednje</span></td><td>2. nedelja</td></tr>
+    <tr><td>Dodati LocalBusiness i FAQPage schema</td><td>nema je nijedna stranica, a FAQ stranica već postoji</td><td><span class="tag tag-1">Srednje</span></td><td>3. nedelja</td></tr>
+    <tr><td>Google profil za svaku lokaciju</td><td>na Kontaktu su tri adrese, bez linka na Google profil</td><td><span class="tag tag-1">Srednje</span></td><td>3–4. nedelja</td></tr>
+    <tr><td>Prepisati deset gradskih stranica</td><td>stranica za Surčin pominje Obrenovac češće nego Surčin</td><td><span class="tag">Teško</span></td><td>4–8. nedelja</td></tr>
+    <tr><td>Zasebne stranice za glavne usluge</td><td>dvanaest usluga iz menija vodi na isti URL</td><td><span class="tag">Teško</span></td><td>5–10. nedelja</td></tr>
+  </tbody>
+</table>
+</div>
+
+<h2>Dva sajta, jedan biznis</h2>
+<p>Isti telefon 063/17-46-527 stoji i na slepsluzba.online i na <a href="https://slepsluzbaseki.rs/">slepsluzbaseki.rs</a>. Oba sajta nose ime Šeki, oba imaju isti meni, oba navode početnu cenu od 3.000 dinara i oba pokrivaju Lajkovac, Obrenovac, Ub, Ljig i autoput Miloš Veliki.</p>
+<div class="table-scroll">
+<table>
+  <thead>
+    <tr><th></th><th>slepsluzba.online</th><th>slepsluzbaseki.rs</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>Naslov</td><td>Šlep služba Šeki, fokus na Ub</td><td>Šlep služba Lazarevac – ŠEKI</td></tr>
+    <tr><td>Telefon</td><td>063/17-46-527</td><td>063/17-46-527</td></tr>
+    <tr><td>Adrese</td><td>Mileve Marić 2, Obrenovac; Pop Boškova 2, Lajkovac; Vuka Karadžića 38, Ub</td><td>Branislava Nušića 8, Lazarevac; Svetosavska 88, Barajevo</td></tr>
+    <tr><td>Pokriveni gradovi</td><td>deset zasebnih stranica: Beograd, Surčin, Jakovo, Obrenovac, Ub, Lajkovac, Ljig, Takovo, Čačak, autoput Miloš Veliki</td><td>Lazarevac, Stepojevac, Vreoci, Veliki Crljeni, Barajevo, Draževac, Lajkovac, Obrenovac, Ub, Ljig</td></tr>
+    <tr><td>Početna cena</td><td>od 3.000 din</td><td>od 3.000 din</td></tr>
+  </tbody>
+</table>
+</div>
+<p>Zašto to smeta u pretrazi: kad neko ukuca „šlep služba Ub“, Google bira jednu od dve stranice, a drugu po pravilu ne prikazuje. Linkovi, recenzije i poseta se skupljaju na dve adrese umesto na jednu. Pet adresa na jedan telefon dodatno otežava potvrdu Google profila, jer Google proverava da telefon i adresa idu zajedno.</p>
+<p>Odluka se donosi po podacima, ne po oseti. Potrebni su pristup Search Console za oba domena i spisak linkova koji vode na njih; domen koji ima više prikaza i više linkova ostaje glavni, drugi se preusmerava stranicu na stranicu (301). Ako tih podataka nema, uobičajen izbor za srpsko tržište je .rs domen, jer je nacionalni i nosi ime firme.</p>
+<p>Ako klijent želi da zadrži oba sajta, jedini način koji ima smisla je stroga podela: svaki sajt svoj telefon, svoje adrese, svoje gradove bez preklapanja i svoj Google profil. To znači drugi broj telefona i dvostruko više posla na sadržaju, pa je prvo rešenje jednostavnije.</p>
+
+<h2>Tehničko stanje</h2>
+<p>Proverenih šest stranica ponaša se isto: nema meta description, nema schema razmetanja i na podstranicama nema H1. To nisu pojedinačne greške nego podešavanje teme, pa se rešava na jednom mestu za ceo sajt.</p>
+<div class="table-scroll">
+<table>
+  <thead>
+    <tr><th>Stranica</th><th>Title</th><th>Meta description</th><th>H1</th><th>Schema</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>/</td><td>duplira se dva puta, oko 95 znakova</td><td>nema</td><td>više H1: „Šlep služba Ub Šeki“ plus „1.“, „2.“, „3.“, „4.“</td><td>nema</td></tr>
+    <tr><td>/slep-sluzba/</td><td>60 znakova</td><td>nema</td><td>nema, naslovi počinju od H3</td><td>nema</td></tr>
+    <tr><td>/slep-sluzba-beograd/</td><td>68 znakova</td><td>nema</td><td>nema, naslovi počinju od H3</td><td>nema</td></tr>
+    <tr><td>/slep-sluzba-ub/</td><td>63 znaka</td><td>nema</td><td>nema, naslovi počinju od H3</td><td>nema</td></tr>
+    <tr><td>/slep-sluzba-surcin/</td><td>67 znakova</td><td>nema</td><td>nema, naslovi počinju od H3</td><td>nema</td></tr>
+    <tr><td>/kontakt/</td><td>56 znakova</td><td>nema</td><td>nema, prvi naslov je H3</td><td>nema</td></tr>
+  </tbody>
+</table>
+</div>
+<p><strong>Title.</strong> Svi naslovi ponavljaju ime firme dva puta po šablonu „Šlep služba Ub – Šlep služba Šeki – Brz dolazak odmah po pozivu“. Google prikazuje oko 60 znakova, pa se odseca upravo deo koji ubedi čoveka da pozove. Kraći oblik radi bolje: „Šlep služba Ub 24/7 – dolazak odmah | 063/17-46-527“ ima 48 znakova i ceo se vidi.</p>
+<p><strong>Meta description.</strong> Nijedna stranica ga nema, pa Google sam sastavlja tekst u rezultatu, najčešće od prvog pasusa. Za uslugu koja se bira u panici tu treba da stoji ono što odlučuje: dostupnost 24/7, vreme dolaska, početna cena i broj telefona.</p>
+<p><strong>H1.</strong> Na početnoj postoji više H1 oznaka, među njima i brojevi „1.“ do „4.“ koji su verovatno ukrasi iz teme. Na podstranicama H1 nema, pa naslovna fraza stranice nije označena kao glavna. Pravilo je jedan H1 po stranici i u njemu usluga plus mesto.</p>
+<p><strong>Ostaci tuđeg šablona.</strong> Na svakoj proverenoj stranici <code>og:image:alt</code> sadrži tekst „Dubinsko pranje Niš pranje tepiha, TOP WASH“ — opis firme za pranje tepiha iz Niša. To je vidljivo kad se link deli na mrežama i treba da se obriše. Meni se u kodu gradskih stranica ponavlja tri puta.</p>
+<p><strong>Schema.</strong> Nema je nijedna stranica. Za ovu uslugu idu <code>LocalBusiness</code> ili <code>TowingService</code> sa telefonom, adresom, <code>areaServed</code> i radnim vremenom 00–24, plus <code>FAQPage</code> na postojećoj FAQ stranici. Većina konkurenata iz top rezultata je takođe nema, pa je ovo jedno od mesta gde se može dobiti prednost bez velikog posla.</p>
+<div class="note">
+  <p>H1 i schema su gledani na prikazanoj stranici, ne u izvornom kodu. Pre popravke vredi proveriti svaku stranicu u Google alatu za bogate rezultate, da se ne ispravlja nešto što postoji ali se ne prikazuje.</p>
+</div>
+
+<h2>Sadržaj: gradovi i usluge</h2>
+<p>Sajt ima deset gradskih stranica, što je dobra osnova — većina malih šlep službi ima samo početnu. Problem je što su tekstovi na njima skoro isti, a na dva mesta govore o pogrešnom gradu.</p>
+<p><strong>Gradovi se mešaju.</strong> Na stranici za Surčin jedan naslov glasi „Pouzdana pomoć u Obrenovcu – dostupni 24/7“, a reč Obrenovac se u tekstu pojavljuje četiri puta prema tri pojavljivanja Surčina. Na stranici za Ub rečenica o pokrivenosti naselja upućuje na „Šlep služba Obrenovac – Šeki“. Google iz toga čita da je stranica o Obrenovcu, pa za upit „šlep služba Surčin“ nema šta da prikaže.</p>
+<p><strong>Tekstovi se ponavljaju.</strong> Blokovi „Iskustvo i stručnost“, „Brzina reakcije“, „Moderni alati i oprema“, „Transparentnost“, „Različite usluge“ i „24/7“ stoje istim rečima na četiri proverene stranice. Osnovnog teksta je 450 do 700 reči po stranici, ali je specifično za grad samo ime grada. Deset takvih stranica se međusobno takmiči i nijedna nije jača od ostalih.</p>
+<p>Rešenje nije pisati više teksta nego pisati ono što važi samo za to mesto: 150 do 250 reči sa imenima naselja i ulica, izlazima sa autoputa, tipičnim slučajevima iz tog mesta i time iz koje baze se izlazi. Šablonski deo može da ostane, ali ispod toga.</p>
+<p><strong>Dvanaest usluga vodi na jedan URL.</strong> U meniju su šlep motora, kombija, kamiona, mašina, kvadova, oldtajmera, prikolica, čamaca, havarisanih vozila, prevoz tereta, uvoz vozila i pomoć na putu — svi linkovi vode na istu stranicu /slep-sluzba/. Ljudi traže te usluge odvojeno, a stranica koja govori o svemu ne odgovara ni na jedan od tih upita precizno. Prvo bih napravio pet zasebnih stranica, po 300 do 500 reči sa cenom: šlep motora, šlep kombija i kamiona, pomoć na putu (akumulator, guma, gorivo), prevoz havarisanih vozila i prevoz oldtajmera.</p>
+<p><strong>Blog ne radi ništa.</strong> Tri teksta, svi od 6. marta 2026, o zimskim gumama leti, pritisku u gumama i mirnoj vožnji. To su teme koje nikoga ne dovedu do poziva šlep službi. Teme koje ljudi stvarno ukucavaju: koliko košta šlepanje do 10 km, šta raditi kad se auto pokvari na autoputu, <a href="https://www.polovniautomobili.com/auto-vesti/saveti/6661/da-li-pokvaren-auto-sme-da-se-vuce-na-autoputu">sme li pokvaren auto da se vuče na autoputu</a> i kako prepoznati pravu šlep službu — o lažnim šlep službama koje naplate previše <a href="https://www.021.rs/story/Info/Srbija/278318/Na-putevima-u-Srbiji-lazne-slep-sluzbe-varaju-vozace-i-naplacuju-visoke-naknade.html">pisali su mediji</a>, a firma sa tri adrese i fiksnom cenom ima šta da kaže na tu temu.</p>
+<p><strong>Šta već radi.</strong> Galerija intervencija sa pravim fotografijama i FAQ stranica su dve stvari koje većina konkurenata nema. Galeriji trebaju alt opisi i po jedna rečenica ispod svake slike sa mestom i tipom vozila, a FAQ stranici <code>FAQPage</code> razmetanje da se pitanja pojave u rezultatu pretrage.</p>
+
+<h2>Cene i poverenje</h2>
+<p><strong>Brojači stoje na nuli.</strong> Na stranicama /slep-sluzba/, /slep-sluzba-ub/ i /slep-sluzba-surcin/ brojači prikazuju „0+“, „0/7“ i „0min“, a odmah pored piše da je bilo preko 1.000 zadovoljnih klijenata i preko 5.000 intervencija. Posetilac vidi nulu. To treba popraviti pre svega ostalog na sadržaju, jer košta samo unos cifara.</p>
+<p><strong>Tvrdnje se ne poklapaju.</strong> Na istoj stranici stoji i „preko decenije iskustva“ i „preko dve decenije“, a na početnoj „više od 10+ godina“. Dolazak „za oko 20 minuta“ važi za Ub i okolinu, ali ne i za Čačak ili Beograd, a stoji na svim stranicama. Jedna cifra, ona koja je tačna, ponovljena svuda isto — i vreme dolaska po mestu, ne jedno za sve.</p>
+<p><strong>Cenovnika nema.</strong> Sajt navodi samo „od 3.000 din“. Tri sajta iz prvih rezultata za „šlep služba Beograd“ imaju punu tabelu, pa upiti o ceni idu njima.</p>
+<div class="table-scroll">
+<table>
+  <thead>
+    <tr><th>Rastojanje</th><th>slepbeograd.rs, do 2 t</th><th>slepsluzbasrbija.rs, do 1,5 t</th><th>slepsluzba.online</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>do 10 km</td><td>2.500 din</td><td>3.500 din</td><td>nije objavljeno</td></tr>
+    <tr><td>do 20 km</td><td>3.000 din</td><td>4.500 din</td><td>nije objavljeno</td></tr>
+    <tr><td>do 30 km</td><td>4.000 din</td><td>6.000 din</td><td>nije objavljeno</td></tr>
+    <tr><td>preko 30 km</td><td>po dogovoru</td><td>130 din/km</td><td>nije objavljeno</td></tr>
+    <tr><td>noćna tarifa 22–06</td><td>doplata</td><td>plus 2.000 din</td><td>nije objavljeno</td></tr>
+  </tbody>
+</table>
+</div>
+<p>Iz ovoga se vidi i jedna neprijatna stvar: početna cena od 3.000 dinara nije najniža na tržištu, pa bi nastup na „najbolja cena“ bio gubitnički. Ono što se može dobiti je pun cenovnik sa jasnim doplatama — noćni izlazak, izvlačenje sa kolovoza, blokirano kolo — i rečenica da se cena dogovorena na telefon ne menja. Mediji su pisali o <a href="https://www.kurir.rs/vesti/beograd/3874745/oprez-prevaranti-vrebaju-na-auto-putu-imaju-razradjen-sistem-ako-vam-se-pokvari-auto-odmah-prilaze-a-onda-pocinje-ova-prica">lažnim šlep službama koje na putu naplate previše</a>, pa firma sa objavljenim cenovnikom i tri adrese ima čime da se razlikuje.</p>
+<p><strong>Superlativi.</strong> Konkurenti pišu „garantovano najbolja šlep služba u Srbiji“ i „najbolja šlep služba u Beogradu“. To ne pomera pozicije u pretrazi, a kod čoveka koji bira po poverenju radi protiv vas. Broj intervencija, godine rada i objavljena cena rade bolje od svakog „najbolji“.</p>
+
+<h2>Konkurenti</h2>
+<p>Za upit „šlep služba Beograd“ u prvim rezultatima je deset domena koji se bave samo šlepanjem. Tri sam pogledao detaljno.</p>
+<div class="table-scroll">
+<table>
+  <thead>
+    <tr><th>Sajt</th><th>Struktura</th><th>Cene</th><th>Gde je jak</th><th>Gde je slab</th></tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a href="https://slepbeograd.rs/">slepbeograd.rs</a></td>
+      <td>oko 50 stranica po beogradskim opštinama i naseljima, 13 stranica usluga, 6 stranica po deonicama autoputa, cenovnik, blog, galerija</td>
+      <td>na početnoj, od 2.500 din</td>
+      <td>najrazvijenija lokalna struktura u niši; cena stoji u naslovu rezultata</td>
+      <td>pravopisne greške, linkovi vode na pogrešne stranice, nema adrese ni vidljive schema</td>
+    </tr>
+    <tr>
+      <td><a href="https://slepsluzbasrbija.rs/cenovnik">slepsluzbasrbija.rs</a></td>
+      <td>oko 15 stranica, 5 usluga, lokacije, verzije na engleskom i ruskom</td>
+      <td>pun cenovnik sa cenom po km i svim doplatama</td>
+      <td>najdetaljniji cenovnik; ima stranicu za Stepojevac, što je domaći teren Šekija</td>
+      <td>FAQ stoji na dve adrese</td>
+    </tr>
+    <tr>
+      <td><a href="https://slepvukojevic.rs/">slepvukojevic.rs</a></td>
+      <td>jedna strana sa kotvicama, bez stranica po uslugama i rejonima</td>
+      <td>nema cena, samo „fer cene“</td>
+      <td>dobar meta description, odzivi sa imenima</td>
+      <td>više H1, prazni alt opisi, u futeru piše tuđi domen, nema adrese</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+<p>Još šest domena je u prvim rezultatima za Beograd: profislep.rs, topslep.rs, slepsluzbarapaic.rs, slepsluzbamojbeograd.rs, slepsluzba-ss.rs i slepsluzbasrbija.com. Obrenovac zasebno gledaju <a href="https://www.slepsluzba.net/slep-sluzba-obrenovac">slepsluzba.net</a> i <a href="https://www.autokucaisailovic.rs/lokacije/obrenovac">autokucaisailovic.rs</a>.</p>
+<p><strong>Šta to znači za plan.</strong> Upit „šlep služba Beograd“ se ne osvaja u ovoj godini. Protivnici su domeni stariji nekoliko godina, sa pedeset lokalnih stranica i cenom u naslovu. Beogradska stranica treba da ostane, ali kao jedna od deset, a ne kao glavni cilj.</p>
+<p>Gde se realno može doći na prvu stranu: Ub, Lajkovac, Ljig, Takovo, Obrenovac, Surčin i Jakovo. Beogradske firme te upite pokrivaju površno — jednom rečenicom u spisku naselja — a Šeki tamo ima adrese, fotografije intervencija i kratko vreme dolaska. Isto važi za autoput Miloš Veliki: konkurenti imaju po jednu stranicu za celu deonicu, a ovde se mogu napraviti stranice po izlazima, što je i korisnije vozaču i lakše za rangiranje.</p>
+<p>To nije mali tržišni deo. Ub, Lajkovac i Ljig su na putu između Beograda i Čačka, a autoput Miloš Veliki prolazi kroz sve tri opštine.</p>
+
+<h2>Lokalni SEO i Google profil</h2>
+<p>Za šlep službu je mapa u Google rezultatima važnija od običnih linkova. Čovek pored pokvarenog auta otvori mapu, pogleda ocenu i pozove prvi broj. Tu sajt trenutno nema šta da pokaže.</p>
+<p>Stranica Kontakt ima tri adrese sa linkovima na Google mape: Mileve Marić 2 u Obrenovcu, Pop Boškova 2 u Lajkovcu i Vuka Karadžića 38 u Ubu. Nema linka na Google profil firme, nema vidljive ocene ni broja recenzija, a radno vreme 00–24 piše samo u futeru.</p>
+<p><strong>Google profil po lokaciji.</strong> Svaka od adresa može imati svoj profil, sa kategorijom „Šlep služba“ i radnim vremenom 00–24. Jedna stvar tu smeta: isti telefon stoji na svih pet adresa (tri na ovom sajtu, dve na slepsluzbaseki.rs), a Google proverava da telefon i adresa idu zajedno. Verifikacija pet lokacija na jedan broj obično ne prođe. Realno je početi od jedne glavne lokacije, pa dodavati ostale sa zasebnim brojevima.</p>
+<p><strong>Recenzije.</strong> Nigde na sajtu nema Google ocene. U lokalnoj pretrazi ocena i broj recenzija pomeraju poziciju u mapi više nego tekst na stranici. Najjednostavnije što se može uvesti: posle svake intervencije SMS sa direktnim linkom na ostavljanje recenzije. Dvadeset realnih recenzija u Ubu i Lajkovcu je dovoljno da se razlikuje od beogradskih firmi koje tamo nemaju ni jednu.</p>
+<p><strong>NAP doslednost.</strong> Ime firme treba da se piše isto svuda — i na sajtu, i na Google profilu, i u imenicima. Sada se javlja kao „Šlep služba Šeki“, „Šlep služba Ub – Šeki“ i „Šlep služba Lazarevac – ŠEKI“. Jedan oblik, ostali kao opis.</p>
+<p><strong>Imenici.</strong> U rezultatima za šlep službe redovno izlaze <a href="https://www.planplus.rs/beograd/slep-sluzbe">planplus.rs</a>, halooglasi.com, <a href="https://www.firma.co.rs/general/lep-sluba-obrenovac-eki/536">firma.co.rs</a> i beogradski.press. Na firma.co.rs već postoji unos za Šlep službu Obrenovac – Šeki. Ostale upise treba dopuniti istim podacima i linkom na glavni domen.</p>
+<p><strong>Schema sa adresom.</strong> <code>LocalBusiness</code> ili <code>TowingService</code> sa <code>address</code>, <code>telephone</code>, <code>openingHours</code> 00–24 i <code>areaServed</code> po mestima koje pokrivate. To je ono što Google čita sa stranice kad spaja sajt sa profilom na mapi.</p>
+
+<h2>Plan rada</h2>
+<div class="table-scroll">
+<table>
+  <thead>
+    <tr><th>Faza</th><th>Period</th><th>Šta se radi</th><th>Šta se očekuje</th></tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1. Čišćenje</td><td>1–2. nedelja</td>
+      <td>meta opisi za sve stranice, po jedan H1, skraćeni naslovi, brisanje <code>og:image:alt</code> o pranju tepiha, prave cifre u brojačima, usaglašavanje tvrdnji o iskustvu, podešavanje Search Console za oba domena</td>
+      <td>rezultati u pretrazi počinju da prikazuju vaš tekst umesto Google-ovog; prvi podaci o upitima</td>
+    </tr>
+    <tr>
+      <td>2. Odluka o domenu i osnova</td><td>3–4. nedelja</td>
+      <td>odluka o glavnom domenu na osnovu podataka, 301 preusmerenja, stranica Cenovnik, LocalBusiness i FAQPage schema, Google profil za glavnu lokaciju, dopuna unosa u imenicima</td>
+      <td>upiti o ceni dolaze na sajt; profil na mapi počinje da prikuplja pozive</td>
+    </tr>
+    <tr>
+      <td>3. Gradovi</td><td>5–8. nedelja</td>
+      <td>prepisivanje deset gradskih stranica, uklanjanje pomena pogrešnih gradova, stranice po izlazima sa autoputa Miloš Veliki, alt opisi i potpisi u galeriji</td>
+      <td>Ub, Lajkovac, Ljig, Takovo, Obrenovac, Surčin i Jakovo ulaze u prvu stranu</td>
+    </tr>
+    <tr>
+      <td>4. Usluge i recenzije</td><td>9–12. nedelja</td>
+      <td>pet zasebnih stranica usluga, tekstovi o ceni šlepanja i o prepoznavanju lažnih šlep službi, SMS poziv na recenziju posle svake intervencije</td>
+      <td>upiti po tipu vozila; ocena na mapi</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+<p><strong>Kako se meri.</strong> Jedna tabela u Search Console po mesecima: prikazi i klikovi za upite koji sadrže ime mesta, i isto za upite koji sadrže reč „cena“. Pored toga broj poziva sa Google profila, koji profil sam beleži. Bez tih podataka ni jedna tvrdnja o rezultatu ne može da se proveri, pa to ide u prvoj nedelji.</p>
+<p><strong>O rokovima, bez ulepšavanja.</strong> Popravke iz prve faze se vide u pretrazi za jednu do tri nedelje, jer Google samo ponovo pročita stranice. Gradske stranice iz treće faze traže mesec do tri da se pozicioniraju, i to za mesta sa malo konkurencije — Ub, Lajkovac, Ljig, Takovo. Za Beograd se u ovom roku neće desiti ništa vidljivo i to ne treba obećavati. Pozicija u mapi zavisi od recenzija, a one se ne mogu ubrzati sa sajta.</p>
+
+<h2>Šta nije provereno i šta treba od klijenta</h2>
+<p><strong>Nije provereno.</strong> Otvoreno je šest stranica: početna, /slep-sluzba/, /slep-sluzba-beograd/, /slep-sluzba-ub/, /slep-sluzba-surcin/ i /kontakt/. Stranice za Jakovo, Obrenovac, Lajkovac, Ljig, Takovo i Čačak, kao i FAQ, blog i galerija, nisu otvorene — po svemu sudeći ponašaju se isto, ali to nije potvrđeno. Brzina učitavanja nije merena. Nema pristupa Search Console, analitici ni Google profilu, pa u ovom auditu nema podataka o poseti, pozicijama i upitima; prioriteti su postavljeni po tome šta se vidi na sajtu i u rezultatima pretrage.</p>
+<p><strong>Pitanja za klijenta.</strong></p>
+<ol>
+  <li>Koji domen ostaje glavni, i da li su oba njegova?</li>
+  <li>Može li se dodati drugi broj telefona, ako se zadržavaju dve lokacije na mapi?</li>
+  <li>Prave cifre: koliko godina rada, koliko intervencija, prosečno vreme dolaska po mestima.</li>
+  <li>Može li se objaviti pun cenovnik sa doplatama za noćni izlazak i izvlačenje?</li>
+  <li>Iz kojih mesta sada stvarno dolaze pozivi — po tome ide red prepisivanja gradskih stranica.</li>
+  <li>Postoji li već Google profil firme i na koju adresu je prijavljen?</li>
+  <li>Ko ima pristup sajtu i može da menja šablon.</li>
+</ol>
+
+<h2>Izvori</h2>
+<p>Stranice otvorene za ovaj audit, 26. oktobra 2026:</p>
+<ul>
+  <li><a href="https://slepsluzba.online/">slepsluzba.online</a> — početna, <a href="https://slepsluzba.online/slep-sluzba/">Šlep služba</a>, <a href="https://slepsluzba.online/slep-sluzba-beograd/">Beograd</a>, <a href="https://slepsluzba.online/slep-sluzba-ub/">Ub</a>, <a href="https://slepsluzba.online/slep-sluzba-surcin/">Surčin</a>, <a href="https://slepsluzba.online/kontakt/">Kontakt</a></li>
+  <li><a href="https://slepsluzbaseki.rs/">slepsluzbaseki.rs</a> — drugi sajt istog telefona</li>
+  <li><a href="https://slepbeograd.rs/">slepbeograd.rs</a>, <a href="https://slepvukojevic.rs/">slepvukojevic.rs</a>, <a href="https://slepsluzbasrbija.rs/cenovnik">slepsluzbasrbija.rs/cenovnik</a> — konkurenti</li>
+  <li><a href="https://www.planplus.rs/beograd/slep-sluzbe">planplus.rs</a>, <a href="https://www.firma.co.rs/general/lep-sluba-obrenovac-eki/536">firma.co.rs</a> — imenici</li>
+  <li><a href="https://www.021.rs/story/Info/Srbija/278318/Na-putevima-u-Srbiji-lazne-slep-sluzbe-varaju-vozace-i-naplacuju-visoke-naknade.html">021.rs</a>, <a href="https://www.kurir.rs/vesti/beograd/3874745/oprez-prevaranti-vrebaju-na-auto-putu-imaju-razradjen-sistem-ako-vam-se-pokvari-auto-odmah-prilaze-a-onda-pocinje-ova-prica">kurir.rs</a>, <a href="https://www.polovniautomobili.com/auto-vesti/saveti/6661/da-li-pokvaren-auto-sme-da-se-vuce-na-autoputu">polovniautomobili.com</a> — teme za blog</li>
+</ul>
+
+<footer class="doc">
+  <p>SEO audit sajta slepsluzba.online · 26. oktobar 2026</p>
+</footer>
+
+</div>
+</body>
+</html>
